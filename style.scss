@@ -1,0 +1,297 @@
+@use 'colors' as *;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+    color: $lg;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+header{
+    background-image: url(../img/desktop/architecture-g985199a29_1920.jpg);
+    background-position: center;
+    background-attachment: fixed;
+
+    .hero_image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    
+        .club_logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 50vw;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .shadow{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 3.4em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        top: 0;
+        width: 100vw;
+        height: 70px;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 4;
+
+        .wrapper{
+            position: fixed;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            
+            nav{
+                display: inline-block;
+        
+                .club_name{
+                    position: absolute;
+                    left: 0;
+                    text-transform: uppercase;
+                    font-size: 2.2em;
+                    font-weight: 700;
+                    color: $main;
+                }
+                .links{
+                    position: absolute;
+                    right: 0;
+                }
+                a{
+                    padding: 10px;
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 1.8em;
+                    font-weight: 700;
+                }
+                .menu_hamburger{
+                    position: absolute;
+                    right: 0;
+                    width: 32px;
+                    color: $main;
+                }
+            }
+        }
+    }
+
+}
+
+main{
+    position: relative;
+    width: 100vw;
+
+    .shadow{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 4;
+
+        .main_sections{
+            background-color: $b;
+            padding-bottom: 40px;
+
+            .wrapper{
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+        
+                h2, h3, p{display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h2, h3{    
+                    padding-bottom: 20px;
+                }
+                h2{
+                    padding:40px;
+                    font-size: 2.8em;
+                    text-decoration: underline;
+                    color: $main;
+                }
+                h3{
+                    font-size: 2.3em;
+                    color: $main;
+                }
+                p{
+                    font-size: 2em;
+                }
+            }
+        }
+        .club{
+            
+            text-align: justify;
+
+            .wrapper{
+                padding: 20px 40px;
+
+                img{
+                    width: 140px;
+                    border-radius: 50%;
+                    margin-right: 25px;
+                    float: left;
+                }
+                p{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .trainers{
+            height: 50vh;
+            background-image: url(../img/desktop/jiu-jitsu-gc042b4d3c_1920.jpg);
+            background-position: center;
+            background-attachment: fixed;
+
+            .shadow{
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 1;
+            }
+        }
+        .workouts{
+            background-color: $ng;
+            display: flex;
+            justify-content: center;
+            
+            .cards{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                
+                .card{
+                    position: relative;
+                    flex-direction: row;
+                    width: 25%;
+                    height: 50%;
+
+                    img{
+                        width: 100%;
+                    }
+                    h3{
+                        position: absolute;
+                        top: 2%;
+                        left: 8%;
+                        z-index: 0;
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        // display: block;
+                        // width: 30px;
+                        font-size: 2.8em;
+                        text-transform: uppercase;
+                        justify-content: center;
+                        text-align: center;
+                        line-height: 0px;
+                    }
+                    .h_color{
+                        color: $b;
+                    }
+                    h4, p{
+                        display: none;
+                    }
+                   
+                    img:hover~.card_info, h3:hover~.card_info{
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.8);
+
+                        h4{
+                            display: flex;
+                            position: absolute;
+                            top: 2%;
+                            left: 8%;
+                            z-index: 0;
+                            writing-mode: vertical-rl;
+                            text-orientation: upright;
+                            // display: block;
+                            // width: 30px;
+                            font-size: 2.8em;
+                            text-transform: uppercase;
+                            justify-content: center;
+                            text-align: center;
+                            line-height: 0px;
+                            color: $main;
+                            z-index: 1;  
+                        }
+                        .h_color{
+                            color: $main;
+                        }
+                        p{
+                            display: flex;
+                            width: 100%;
+                            height: 50%;
+                            font-size: 2.2em;
+                            // font-weight: 700;
+                            text-transform: uppercase;
+                            text-align: center;
+                            // margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .institution{
+            background-image: url(../img/desktop/moscow-gf5c748e34_1920.jpg);
+            background-position: center;
+            background-attachment: fixed;
+            height: 600px;
+            
+            .shadow{
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .google_map{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .contact{
+            background-color: $b;
+
+            a{
+                text-decoration: none;
+                color: $main;
+            }
+        }
+    }
+}
+
+// footer{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 20px;
+//     font-size: 1.2em;
+//     color: $w;
+// }

@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #E5E5E5;
+  font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+header {
+  background-image: url(../img/desktop/dojo.jpg);
+  background-position: center;
+  background-attachment: fixed;
+}
+header .hero_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+header .hero_image .club_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 70vh;
+  border-radius: 50%;
+  z-index: 0;
+}
+header .hero_image .shadow {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+header .hero_image h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+header .navbar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 4;
+}
+header .navbar .wrapper {
+  position: fixed;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .navbar .wrapper nav {
+  display: inline-block;
+}
+header .navbar .wrapper nav .club_name {
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+}
+header .navbar .wrapper nav .links {
+  position: absolute;
+  right: 0;
+}
+header .navbar .wrapper nav a {
+  padding: 10px;
+  color: #E5E5E5;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+header .navbar .wrapper nav a:hover, header .navbar .wrapper nav .budo_a {
+  background-image: linear-gradient(90deg, #FBA92C, #f7ed08, #FBA92C);
+  background-size: 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+header .navbar .wrapper nav .nav_facebook {
+  position: absolute;
+  height: 1.8rem;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+}
+main .shadow {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+}
+main .shadow .main_sections {
+  background-color: #000;
+  padding-bottom: 40px;
+}
+main .shadow .main_sections .wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .shadow .main_sections .wrapper h2, main .shadow .main_sections .wrapper h3, main .shadow .main_sections .wrapper h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .shadow .main_sections .wrapper h2 {
+  padding: 40px;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: #f7d931;
+}
+main .shadow .main_sections .wrapper h3 {
+  font-size: 1.4rem;
+  color: #f7ed08;
+}
+main .shadow .main_sections .wrapper p {
+  padding: 5px;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+main .shadow .club .wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main .shadow .club .wrapper p {
+  line-height: 30px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+main .shadow .trainers {
+  background-image: url(../img/desktop/master.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  height: 800px;
+}
+main .shadow .trainers .shadow {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+main .shadow .trainers .shadow .wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main .shadow .trainers .shadow .wrapper .splide .splide__track .splide__list .splide__slide {
+  height: 600px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+main .shadow .trainers .shadow .wrapper .splide .splide__track .splide__list .splide__slide .splide__img {
+  width: 100%;
+}
+main .shadow .trainers .shadow .wrapper .splide .splide__track .splide__list .splide__slide .splide__info {
+  width: 100%;
+  height: 35%;
+  padding: 10px;
+  background-color: #000;
+  color: #E5E5E5;
+}
+main .shadow .trainers .shadow .wrapper .splide .splide__track .splide__list .splide__slide .splide__info .splide__title {
+  margin: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .shadow .trainers .shadow .wrapper .splide .splide__track .splide__list .splide__slide .splide__info .splide__text {
+  font-size: 0.9rem;
+}
+main .shadow .workouts {
+  background-color: #000;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+main .shadow .workouts .cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 40px;
+}
+main .shadow .workouts .cards .card {
+  position: relative;
+  flex-direction: row;
+  width: 30%;
+  height: 50%;
+}
+main .shadow .workouts .cards .card img {
+  width: 100%;
+}
+main .shadow .workouts .cards .card h3 {
+  position: absolute;
+  top: 2%;
+  left: 8%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 2.8em;
+  text-transform: uppercase;
+  justify-content: center;
+  text-align: center;
+  line-height: 0px;
+}
+main .shadow .workouts .cards .card .h_color {
+  color: #000;
+}
+main .shadow .workouts .cards .card .card_info {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+main .shadow .workouts .cards .card .card_info h4 {
+  display: flex;
+  position: absolute;
+  top: 2%;
+  left: 8%;
+  z-index: 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 2.8em;
+  text-transform: uppercase;
+  justify-content: center;
+  text-align: center;
+  line-height: 0px;
+  color: #f7ed08;
+  z-index: 1;
+}
+main .shadow .workouts .cards .card .card_info .h4_jujitsu {
+  color: #f7ed08;
+}
+main .shadow .workouts .cards .card .card_info .card_title {
+  color: #158eff;
+}
+main .shadow .workouts .cards .card .card_info .p_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .shadow .workouts .cards .card .card_info .p_info .day {
+  margin-bottom: 20px;
+}
+main .shadow .workouts .cards .card .card_info .p_info p {
+  display: block;
+  width: 100%;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+main .shadow .workouts .cards .card .card_info:hover {
+  opacity: 1;
+}
+main .shadow .institution {
+  background-image: url(../img/desktop/city.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px;
+}
+main .shadow .institution .shadow {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+main .shadow .institution .google_map {
+  display: flex;
+  justify-content: center;
+}
+main .shadow .contact {
+  background-color: #000;
+}
+main .shadow .contact a {
+  text-decoration: none;
+  color: #158eff;
+}
+main .shadow .contact .email, main .shadow .contact .phone {
+  transition: color 0.3s;
+}
+main .shadow .contact .email:hover, main .shadow .contact .phone:hover {
+  color: #f7d931;
+}
+main .shadow .contact .facebook {
+  cursor: pointer;
+  transition: 0.3s;
+}
+main .shadow .contact .facebook:hover {
+  color: #f7d931;
+}
+main .pic_info {
+  margin: 0 auto;
+}
+main .pic_info .foto_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .pic_info .foto_info p, main .pic_info .foto_info a {
+  margin: 50px auto 10px;
+  text-decoration: none;
+  color: #E5E5E5;
+  font-size: 0.6rem;
+}
+main .pic_info .foto_info a:hover {
+  color: #f7d931;
+}/*# sourceMappingURL=style.css.map */

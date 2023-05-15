@@ -1,0 +1,376 @@
+@use 'colors' as *;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $black;
+    color: $lg;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+header{
+    background-image: url(../img/desktop/dojo.jpg);
+    background-position: center;
+    background-attachment: fixed;
+
+    .hero_image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    
+        .club_logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 70vh;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .shadow{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 70px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 4;
+
+        .wrapper{
+            position: fixed;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            
+            nav{
+                display: inline-block;
+        
+                .club_name{
+                    position: absolute;
+                    left: 0;
+                    text-transform: uppercase;
+                }
+                .links{
+                    position: absolute;
+                    right: 0;
+                }
+                a{
+                    padding: 10px;
+                    color: $lg;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+                a:hover, .budo_a{
+                    background-image: linear-gradient(90deg, $main3, $main, $main3);
+                    background-size: 100%;
+                    background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                    -moz-text-fill-color: transparent;
+                }
+                .nav_facebook{
+                    position: absolute;
+                    height: 1.8rem;
+                }
+                // .menu_hamburger{
+                //     position: absolute;
+                //     right: 0;
+                //     width: 32px;
+                //     color: $main;
+                // }
+            }
+        }
+    }
+
+}
+
+main{
+    position: relative;
+    width: 100vw;
+
+    .shadow{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 4;
+
+        .main_sections{
+            background-color: $black;
+            padding-bottom: 40px;
+
+            .wrapper{
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+        
+                h2, h3, h4{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h2{
+                    padding:40px;
+                    font-size: 1.6rem;
+                    text-decoration: underline;
+                    color: $main2;
+                }
+                h3{
+                    font-size: 1.4rem;
+                    color: $main;
+                }
+                p{
+                    padding: 5px;
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                    
+                    text-align: center;
+                }
+            }
+        }
+
+        .club{
+
+            .wrapper{
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+
+                p{
+                    line-height: 30px;
+                    margin-bottom: 20px;
+                    text-align: justify;
+                }
+            }
+        }
+        .trainers{
+            background-image: url(../img/desktop/master.jpg);
+            background-position: center;
+            background-attachment: fixed;
+            height: 800px;
+
+            .shadow{
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 1;
+
+                .wrapper{
+                    width: 100%;
+                    max-width: 1000px;
+                    margin: 0 auto;
+
+                    .splide{
+
+                        .splide__track{
+
+                            .splide__list{
+                                
+                                .splide__slide{
+                                    height: 600px;
+                                    padding: 0 20px;
+                                    margin-bottom: 30px;
+
+                                    .splide__img{
+                                        width: 100%;
+                                    }
+                                    .splide__info{
+                                        width: 100%;
+                                        height: 35%;
+                                        padding: 10px;
+                                        background-color: $black;
+                                        color: $lg;    
+
+                                        .splide__title{
+                                            margin: 5px;
+                                            font-size: 1.2rem;
+                                            font-weight: bold;
+
+                                        }
+                                        .splide__text{
+                                            font-size: 0.9rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .workouts{
+            background-color: $black;
+            max-width: 1000px;
+            margin: 0 auto;
+            
+            .cards{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding-bottom: 40px;
+                
+                .card{
+                    position: relative;
+                    flex-direction: row;
+                    width: 30%;
+                    height: 50%;
+
+                    img{
+                        width: 100%;
+                    }
+                    h3{
+                        position: absolute;
+                        top: 2%;
+                        left: 8%;
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        font-size: 2.8em;
+                        text-transform: uppercase;
+                        justify-content: center;
+                        text-align: center;
+                        line-height: 0px;
+                    }
+                    .h_color{
+                        color: $black;
+                    }
+                    .card_info{
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.9);
+                        opacity: 0;
+                        transition: opacity .3s;
+
+                        h4{
+                            display: flex;
+                            position: absolute;
+                            top: 2%;
+                            left: 8%;
+                            z-index: 0;
+                            writing-mode: vertical-rl;
+                            text-orientation: upright;
+                            font-size: 2.8em;
+                            text-transform: uppercase;
+                            justify-content: center;
+                            text-align: center;
+                            line-height: 0px;
+                            color: $main;
+                            z-index: 1;  
+                        }
+                        .h4_jujitsu{
+                            color: $main;
+                        }
+                        .card_title{
+                            color: $blue;
+                        }
+                        .p_info{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+                            .day{
+                                margin-bottom: 20px;
+                            }
+                            p{
+                                display: block;
+                                width: 100%;
+                                font-size: 2.2em;
+                                text-transform: uppercase;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .card_info:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .institution{
+            background-image: url(../img/desktop/city.jpg);
+            background-position: center;
+            background-attachment: fixed;
+            height: 600px;
+            
+            .shadow{
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            .google_map{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .contact{
+            background-color: $black;
+
+            a{
+                text-decoration: none;
+                color: $blue;
+            }
+            .email, .phone{
+                transition: color .3s;
+            }
+            .email:hover, .phone:hover{
+                color: $main2;
+            }
+            .facebook{
+                cursor: pointer;
+                transition: .3s;
+            }
+            .facebook:hover{
+                color: $main2;
+            }
+        }
+    }
+    .pic_info{
+                margin: 0 auto;
+    
+        .foto_info{ 
+            display: flex;
+            justify-content: center;
+            align-items: center;           
+
+            p, a{
+                margin: 50px auto 10px;
+                text-decoration: none;
+                color: $lg;
+                font-size: .6rem;
+            }
+            a:hover{
+                color: $main2;
+            }
+        }
+    }
+}
